@@ -69,6 +69,9 @@ jobs:
         os: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 15
+    permissions:
+      contents: read
+      id-token: write
     defaults:
       run:
         shell: bash
@@ -77,10 +80,22 @@ jobs:
       HERMES_SHA: 7dab93b06e2bb3757dc18229169efcee1b5b47a3
 
     steps:
-      # Pinned by SHA: this job receives TINYFISH_API_KEY.
+      # Pinned by SHA: this job reads TINYFISH_API_KEY.
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:
           persist-credentials: false
+
+      - uses: aws-actions/configure-aws-credentials@e1253824e5c10ff9df46874f81ed3ec929e19cfd # v6.3.0
+        with:
+          role-to-assume: arn:aws:iam::611021602836:role/ih-tf-tinyfish-web-agent-integrations-github
+          aws-region: us-west-1
+
+      - name: Read TinyFish API key
+        run: |
+          set -euo pipefail
+          key=$(aws secretsmanager get-secret-value --secret-id INTEGRATIONS_TINYFISH_API_KEY --query SecretString --output text)
+          echo "::add-mask::$key"
+          echo "TINYFISH_API_KEY=$key" >> "$GITHUB_ENV"
 
       - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
 
@@ -98,6 +113,4 @@ jobs:
           echo "HERMES_PYTHON=$bin/python" >> "$GITHUB_ENV"
 
       - name: Plugin e2e
-        env:
-          TINYFISH_API_KEY: ${{ secrets.TINYFISH_API_KEY }}
         run: hermes/scripts/e2e.sh
