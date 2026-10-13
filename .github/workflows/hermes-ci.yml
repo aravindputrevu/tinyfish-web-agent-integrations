@@ -68,6 +68,7 @@ jobs:
         # Windows decodes subprocess output as cp1252, which broke `tinyfish setup` there.
         os: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
     defaults:
       run:
         shell: bash
