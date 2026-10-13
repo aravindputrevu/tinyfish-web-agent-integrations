@@ -62,7 +62,15 @@ jobs:
       - run: python -m build
 
   e2e:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # Windows decodes subprocess output as cp1252, which broke `tinyfish setup` there.
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
     env:
       # Bump deliberately: upstream Hermes moves fast and breaks plugin internals.
       HERMES_SHA: 7dab93b06e2bb3757dc18229169efcee1b5b47a3
@@ -84,10 +92,11 @@ jobs:
           git -C "$src" checkout -q FETCH_HEAD
           uv venv -q -p 3.14 "$RUNNER_TEMP/hvenv"
           VIRTUAL_ENV="$RUNNER_TEMP/hvenv" uv pip install -q -e "$src"
-          echo "$RUNNER_TEMP/hvenv/bin" >> "$GITHUB_PATH"
+          bin="$RUNNER_TEMP/hvenv/$([ "$RUNNER_OS" = Windows ] && echo Scripts || echo bin)"
+          echo "$bin" >> "$GITHUB_PATH"
+          echo "HERMES_PYTHON=$bin/python" >> "$GITHUB_ENV"
 
       - name: Plugin e2e
         env:
           TINYFISH_API_KEY: ${{ secrets.TINYFISH_API_KEY }}
-          HERMES_PYTHON: ${{ runner.temp }}/hvenv/bin/python
         run: hermes/scripts/e2e.sh

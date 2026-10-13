@@ -7,6 +7,9 @@ HERMES_PYTHON=${HERMES_PYTHON:-python3}
 PLUGIN_DIR=$(cd "$(dirname "$0")/.." && pwd)
 REPO_ROOT=$(git -C "$PLUGIN_DIR" rev-parse --show-toplevel)
 HERMES_HOME=$(mktemp -d)
+# Git Bash: native Windows Python needs C:/ paths, and file:// URLs need a leading slash before the drive.
+if command -v cygpath >/dev/null; then HERMES_HOME=$(cygpath -m "$HERMES_HOME"); fi
+[[ $REPO_ROOT == /* ]] || REPO_ROOT=/$REPO_ROOT
 export HERMES_HOME
 trap 'rm -rf "$HERMES_HOME"' EXIT
 
