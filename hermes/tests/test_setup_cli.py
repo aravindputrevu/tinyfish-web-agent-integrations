@@ -811,6 +811,7 @@ def test_enable_toolset_only_touches_disabled_toolsets(
 
     def fake_run(argv: list[str], **kwargs: Any) -> Any:
         ran.append(argv)
+        assert kwargs["encoding"] == "utf-8" and kwargs["errors"] == "replace"
         if argv[-2:] == ["tools", "list"]:
             return cli.subprocess.CompletedProcess(argv, 0, stdout=listed + "\n")
         return cli.subprocess.CompletedProcess(argv, enable_rc, stdout="")
