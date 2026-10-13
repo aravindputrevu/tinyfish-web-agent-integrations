@@ -22,7 +22,8 @@ step "validate + doctor"
 step "install from git (marketplace path)"
 # No --yes-deps: tinyfish connect installs non-interactively and must still end up enabled.
 # tee so a hang still shows how far the install got.
-install_log=$("$HERMES" plugins install "file://$REPO_ROOT#hermes" --enable </dev/null 2>&1 | tee /dev/stderr)
+"$HERMES" plugins install "file://$REPO_ROOT#hermes" --enable </dev/null 2>&1 | tee "$HERMES_HOME/install.log"
+install_log=$(<"$HERMES_HOME/install.log")
 if grep -qi 'node dependencies' <<<"$install_log"; then
   echo "FAIL: Hermes saw a package.json in the plugin dir" >&2
   exit 1
