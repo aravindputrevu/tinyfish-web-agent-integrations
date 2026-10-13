@@ -559,7 +559,9 @@ def _hermes(*args: str, capture: bool = True) -> subprocess.CompletedProcess[str
     return subprocess.run(
         [sys.executable, "-m", "hermes_cli.main", *args],
         capture_output=capture,
-        text=True,
+        # Hermes prints UTF-8 glyphs; Windows defaults to cp1252 and crashes.
+        encoding="utf-8",
+        errors="replace",
         check=False,
     )
 
