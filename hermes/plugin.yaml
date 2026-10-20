@@ -1,6 +1,6 @@
 name: tinyfish
-version: 0.2.2
-description: "First-party TinyFish plugin for Hermes Agent: free Search and Fetch, plus credit-gated Browser sessions and the tinyfish_agent web agent."
+version: 0.2.3
+description: "TinyFish: the web, built into Hermes. Free Search and Fetch power Hermes's own web_search and web_extract, and when a site needs clicks, forms or a login, a remote browser and the tinyfish_agent web agent handle it."
 author: TinyFish
 kind: backend
 # 0.19 added the pre_tool_call approve directive; older Hermes would skip credit approval.
