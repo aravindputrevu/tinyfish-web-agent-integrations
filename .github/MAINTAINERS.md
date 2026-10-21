@@ -18,7 +18,6 @@ Current Python package version files:
 | Integration | Package | Version file |
 | --- | --- | --- |
 | Google ADK | `tinyfish-adk` | `google-adk/pyproject.toml` |
-| CrewAI | `tinyfish-web-agent` | `crew-ai/pyproject.toml` |
 | LangChain | `langchain-tinyfish` | `langchain/pyproject.toml` |
 
 PyPI versions are immutable. If a version has already been published, bump to a new version such as a patch release before merging.
