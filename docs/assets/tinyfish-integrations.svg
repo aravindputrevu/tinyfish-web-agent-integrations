@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="870" viewBox="0 0 1500 870" role="img" aria-labelledby="title description">
+<title id="title">TinyFish integrations: high-level architecture</title>
+<desc id="description">Claude, Grok, Pi, Hermes, LangChain, Google ADK, Dify, and n8n use integrations in this repository to call TinyFish hosted web tools. TinyFish accesses websites and web apps, then returns results to the agent or workflow. Available tools vary by integration.</desc>
+<rect width="1500" height="870" fill="#ffffff"/>
+<text x="50" y="78.0" fill="#172554" font-family="Arial, Helvetica, sans-serif" font-size="36">TinyFish integrations</text>
+<text x="50" y="118.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="22">Connect your agents and workflows to TinyFish&#x27;s hosted web tools.</text>
+<text x="50" y="187.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="15">YOUR AGENT / WORKFLOW</text>
+<text x="395" y="187.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="15">INTEGRATIONS IN THIS REPO</text>
+<text x="815" y="187.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="15">TINYFISH CLOUD</text>
+<text x="1205" y="187.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="15">LIVE WEB</text>
+<rect x="50" y="218" width="285" height="112" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="68" y="256.0" fill="#172554" font-family="Arial, Helvetica, sans-serif" font-size="18">AI assistants &amp; coding agents</text>
+<text x="68" y="292.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="20">Claude · Grok · Pi</text>
+<rect x="395" y="218" width="340" height="112" rx="12" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="415" y="259.0" fill="#6d28d9" font-family="Arial, Helvetica, sans-serif" font-size="21">MCP + skills</text>
+<text x="415" y="291.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="17">Pi can also use the CLI</text>
+<polyline points="343,274.0 385,274.0" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="377.97933950487703,277.83540430883363 385,274.0 377.97933950487703,270.16459569116637" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="745,274.0 805,274.0" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="797.979339504877,277.83540430883363 805,274.0 797.979339504877,270.16459569116637" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="50" y="354" width="285" height="100" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="68" y="392.0" fill="#172554" font-family="Arial, Helvetica, sans-serif" font-size="18">Hermes Agent</text>
+<text x="68" y="428.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="20">Web and browser tools</text>
+<rect x="395" y="354" width="340" height="100" rx="12" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="415" y="395.0" fill="#6d28d9" font-family="Arial, Helvetica, sans-serif" font-size="21">Native providers + agent tool</text>
+<text x="415" y="427.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="17">Search, Fetch, Browser, Agent</text>
+<polyline points="343,404.0 385,404.0" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="377.97933950487703,407.83540430883363 385,404.0 377.97933950487703,400.16459569116637" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="745,404.0 805,404.0" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="797.979339504877,407.83540430883363 805,404.0 797.979339504877,400.16459569116637" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="50" y="478" width="285" height="100" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="68" y="516.0" fill="#172554" font-family="Arial, Helvetica, sans-serif" font-size="18">Agent frameworks</text>
+<text x="68" y="552.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="20">LangChain · Google ADK</text>
+<rect x="395" y="478" width="340" height="100" rx="12" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="415" y="519.0" fill="#6d28d9" font-family="Arial, Helvetica, sans-serif" font-size="21">Python SDK tools</text>
+<text x="415" y="551.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="17">Framework-native tools</text>
+<polyline points="343,528.0 385,528.0" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="377.97933950487703,531.8354043088336 385,528.0 377.97933950487703,524.1645956911664" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="745,528.0 805,528.0" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="797.979339504877,531.8354043088336 805,528.0 797.979339504877,524.1645956911664" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="50" y="602" width="285" height="100" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="68" y="640.0" fill="#172554" font-family="Arial, Helvetica, sans-serif" font-size="18">Workflow platforms</text>
+<text x="68" y="676.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="20">Dify · n8n</text>
+<rect x="395" y="602" width="340" height="100" rx="12" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="415" y="643.0" fill="#6d28d9" font-family="Arial, Helvetica, sans-serif" font-size="21">REST plugins + nodes</text>
+<text x="415" y="675.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="17">Automation and run management</text>
+<polyline points="343,652.0 385,652.0" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="377.97933950487703,655.8354043088336 385,652.0 377.97933950487703,648.1645956911664" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="745,652.0 805,652.0" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="797.979339504877,655.8354043088336 805,652.0 797.979339504877,648.1645956911664" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="815" y="218" width="310" height="484" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+<text x="839" y="266.0" fill="#1d4ed8" font-family="Arial, Helvetica, sans-serif" font-size="24">Search</text>
+<text x="839" y="293.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="17">Find live web results</text>
+<text x="839" y="350.0" fill="#1d4ed8" font-family="Arial, Helvetica, sans-serif" font-size="24">Fetch</text>
+<text x="839" y="377.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="17">Read page content</text>
+<text x="839" y="434.0" fill="#1d4ed8" font-family="Arial, Helvetica, sans-serif" font-size="24">Web Agent</text>
+<text x="839" y="461.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="17">Complete tasks from a goal</text>
+<text x="839" y="518.0" fill="#1d4ed8" font-family="Arial, Helvetica, sans-serif" font-size="24">Browser</text>
+<text x="839" y="545.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="17">Control a remote browser</text>
+<text x="839" y="602.0" fill="#1d4ed8" font-family="Arial, Helvetica, sans-serif" font-size="24">Monitoring</text>
+<text x="839" y="629.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="17">Scheduled page / topic checks</text>
+<text x="839" y="680.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="15">Tool coverage varies by integration</text>
+<rect x="1205" y="354" width="245" height="224" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+<text x="1227" y="400.0" fill="#166534" font-family="Arial, Helvetica, sans-serif" font-size="21">Websites &amp; web apps</text>
+<text x="1227" y="449.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="19">Public pages</text>
+<text x="1227" y="473.7" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="19">Dynamic interfaces</text>
+<text x="1227" y="498.4" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="19">Signed-in systems</text>
+<polyline points="1135,466 1195,466" fill="none" stroke="#4ade80" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1187.979339504877,469.83540430883363 1195,466 1187.979339504877,462.16459569116637" fill="none" stroke="#4ade80" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="970,714 970,775 192,775 192,714" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 6"/>
+<polyline points="195.83540430883363,721.020660495123 192,714 188.16459569116637,721.020660495123" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="365" y="815.0" fill="#1d4ed8" font-family="Arial, Helvetica, sans-serif" font-size="20">Results return to your agent or workflow</text>
+<text x="50" y="855.0" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="15">High-level view · Follow each integration&#x27;s guide for supported tools and setup.</text>
+</svg>
